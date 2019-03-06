@@ -69,10 +69,9 @@ class RangeCollection2 {
      * @public
      */
     toArray() {
-        let result = Array.from(this._range);
-        console.log('print', result);
+        console.log('print', this._range);
 
-        return result;
+        return this._range;
     }
 
 }
