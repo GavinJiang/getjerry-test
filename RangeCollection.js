@@ -30,8 +30,6 @@ class RangeCollection {
         for (let i = start; i < end; i++) {
             this._range.add(i);
         }
-
-        this._range = new Set(Array.from(this._range).sort( (a, b) => { return a - b; }));
     }
 
     /**

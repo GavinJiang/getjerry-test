@@ -1,3 +1,6 @@
+/**
+ * @author Gavin Jiang
+ */
 class Utils {
     /**
      * Check the param:
