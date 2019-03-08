@@ -15,9 +15,15 @@ class RangeCollection {
     }
 
     /**
+     * @public
+     *
      * Adds a range to the collection
      * @param {Array<number>} range - Array of two integers that specify beginning and end of range.
-     * @public
+     *
+     * @throws TypeError if range is not array {@link Utils#rangeParamCheck}
+     * @throws RangeError if array's length is not equal to 2 {@link Utils#rangeParamCheck}
+     * @throws Error if the elements of array are not integer {@link Utils#rangeParamCheck}
+     * @throws Error if the beginning element greater than last element {@link Utils#rangeParamCheck}
      */
     add(range) {
         console.log('add', range);
@@ -33,9 +39,16 @@ class RangeCollection {
     }
 
     /**
+     * @public
+     *
      * Removes a range from the collection
      * @param {Array<number>} range - Array of two integers that specify beginning and end of range.
-     * @public
+     *
+     * @throws TypeError if range is not array {@link Utils#rangeParamCheck}
+     * @throws RangeError if array's length is not equal to 2 {@link Utils#rangeParamCheck}
+     * @throws Error if the elements of array are not integer {@link Utils#rangeParamCheck}
+     * @throws Error if the beginning element greater than last element {@link Utils#rangeParamCheck}
+     *
      */
     remove(range) {
         console.log('remove', range);
@@ -51,8 +64,9 @@ class RangeCollection {
     }
 
     /**
-     * @return {Array<number>} the list of ranges in the range collection
      * @public
+     *
+     * @return {Array<number>} the list of ranges in the range collection
      */
     toArray() {
         let result = Array.from(this._range);

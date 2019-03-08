@@ -3,13 +3,22 @@
  */
 class Utils {
     /**
+     * @public
+     *
+     * @static
+     *
      * Check the param:
      * 1. must be array;
      * 2. two elements;
      * 3. start must be less than or equal to end.
+     *
      * @param {Array<number>} range
-     * @public
-     * @static
+     *
+     * @throws TypeError if range is not array
+     * @throws RangeError if array's length is not equal to 2
+     * @throws Error if the elements of array are not integer
+     * @throws Error if the beginning element greater than last element
+     *
      */
     static rangeParamCheck(range) {
         if (!Array.isArray(range)) {
